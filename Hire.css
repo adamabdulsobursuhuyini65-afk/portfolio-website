@@ -1,0 +1,145 @@
+:root{
+    --primary-color: #eff4fe;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+    min-height: 100vh;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.contact-card{
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* ICON */
+.contact-icon{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-icon img{
+    width: 50px;
+    
+}
+
+/* TEXT */
+.contact-card h2{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-card p{
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.contact-card input,
+
+.contact-card textarea{
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+}
+
+.contact-card textarea{
+    height: 120px;
+    border-radius: 15px;
+    resize: none;
+}
+
+/* BUTTON */
+.contact-card button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4323;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-card button:hover{
+    opacity: 0.9;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .contact-section{
+        background: #ff4323; /* cleaner mobile look */
+        padding: 30px 15px;
+    }
+
+    .contact-card{
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+
+    .contact-icon{
+        width: 55px;
+        height: 55px;
+        top: -28px;
+    }
+
+    .contact-icon img{
+        width: 25px;
+    }
+
+    .contact-card h2{
+        font-size: 22px;
+    }
+
+    .contact-card p{
+        font-size: 13px;
+    }
+
+    .contact-card input,
+    .contact-card textarea{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .contact-card button{
+        font-size: 14px;
+    }
+}

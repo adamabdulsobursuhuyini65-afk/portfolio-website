@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Atafi Jr</title>
+    <link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+<section class="about">
+
+    <div class="about-container">
+
+        <!-- Image -->
+        <div class="about-img">
+            <img src="images/pic16.png" alt="My Photo">
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+            <h1>About Me</h1>
+
+            <p>
+                I'm <span>Atafi Jr.</span>, a passionate frontend developer who loves building
+                responsive and modern websites using HTML, CSS, and JavaScript.
+            </p>
+
+            <p>
+                I enjoy solving problems, creating user-friendly designs, and continuously
+                improving my skills in web development.
+            </p>
+
+            <p>
+                Currently pursuing a <strong>BSc Computer Science</strong> at 
+                <strong>University for Development Studies</strong>.
+            </p>
+
+            <div class="about-skills">
+    <p><strong>Skills:</strong></p>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+</div>
+
+         
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    var icon = document.getElementById("icon");
+
+// 👉 Load saved theme when page opens
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-theme");
+    icon.src = "images/pic19.png";
+}else{
+    document.body.classList.remove("dark-theme");
+    icon.src = "images/pic18.png";
+}
+
+// 👉 Toggle theme on click
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "images/pic19.png";
+        localStorage.setItem("theme", "dark");   // save
+    }else{
+        icon.src = "images/pic18.png";
+        localStorage.setItem("theme", "light");  // save
+    }
+}
+</script>
+</body>
+</html>

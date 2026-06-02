@@ -1,0 +1,148 @@
+/* RESET */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* COLORS */
+:root{
+    --primary-color: #eff4fe;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #ffffff;
+}
+
+/* MAIN LAYOUT */
+.cv{
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+.left{
+    width: 35%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+.left h2{
+    margin-bottom: 20px;
+}
+
+.left p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* SKILLS */
+.skill{
+    margin-bottom: 10px;
+}
+
+.bar{
+    background: #444;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.bar span{
+    display: block;
+    height: 100%;
+    background: #ff4323;
+    border-radius: 5px;
+}
+
+/* RIGHT SIDE */
+.right{
+    width: 65%;
+    padding: 30px;
+    color: var(--secondary-color);
+}
+
+.right h1{
+    margin-bottom: 10px;
+}
+
+.right h2{
+    margin-top: 20px;
+}
+
+/* PRINT BUTTON */
+.print-btn{
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #ff4323;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .cv{
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .left, .right{
+        width: 100%;
+    }
+
+    .left{
+        text-align: center;
+    }
+
+    .right{
+        padding: 20px;
+    }
+
+    .right h1{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .right h2{
+        font-size: 18px;
+    }
+
+    .left p, .right p{
+        font-size: 14px;
+    }
+
+    .print-btn{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* PRINT MODE */
+
+@media print{
+    .print-btn{
+        display: none;
+    }
+
+    body{
+        background: #fff;
+        color: #000;
+    }
+
+    .cv{
+        margin: 0;
+        box-shadow: none;
+    }
+}

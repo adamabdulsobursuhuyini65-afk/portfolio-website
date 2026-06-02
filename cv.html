@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV - Atafi Jr</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+
+<div class="cv">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <h2>Atafi Jr</h2>
+
+        <p><strong>Email:</strong><br> abdulsobursuhuyiniadam73@gmail.com</p>
+        <p><strong>Phone:</strong><br> +233 531 121 317</p>
+        <p><strong>Location:</strong><br> Tamale, Ghana</p>
+
+        <h3>Skills</h3>
+        <div class="skill">
+            <p>HTML</p><div class="bar"><span style="width:90%"></span></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p><div class="bar"><span style="width:85%"></span></div>
+        </div>
+        <div class="skill">
+            <p>JavaScript</p><div class="bar"><span style="width:80%"></span></div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <h1>Frontend Developer</h1>
+
+        <h2>Profile</h2>
+        <p>
+            Passionate frontend developer with strong skills in building responsive,
+            modern and user-friendly web applications using HTML, CSS and JavaScript.
+        </p>
+
+        <h2>Education</h2>
+        <p><strong>BSc Computer Science</strong></p>
+        <p>University for Development Studies - Nyankpala</p>
+
+        <h2>Projects</h2>
+        <ul>
+            <li style="color: blue;">Portfolio Website (under development..)</li>
+            <li style="color: red;">Image Search App (under development..)</li>
+            <li style="color: blueviolet;">Text-to-Speech App (under development..)</li>
+        </ul>
+
+        <button onclick="window.print()" class="print-btn">Print CV</button>
+
+    </div>
+
+</div>
+ <script>
+var icon = document.getElementById("icon");
+
+// 👉 Load saved theme when page opens
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-theme");
+    icon.src = "images/pic19.png";
+}else{
+    document.body.classList.remove("dark-theme");
+    icon.src = "images/pic18.png";
+}
+
+// 👉 Toggle theme on click
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "images/pic19.png";
+        localStorage.setItem("theme", "dark");   // save
+    }else{
+        icon.src = "images/pic18.png";
+        localStorage.setItem("theme", "light");  // save
+    }
+}
+    </script>
+</body>
+</html>

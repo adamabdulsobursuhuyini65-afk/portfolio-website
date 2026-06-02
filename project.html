@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Atafi jr</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <img src="images/project1.png" alt="Project 1">
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A responsive personal portfolio built with HTML,CSS & JavaScript.
+                    
+                </p>
+                <a href="#" class="btn project-btn open-modal" data-title="Portfolio Website" data-desc="A responsive Porfolio 
+                  built with HTML, CSS & Javascript." data-img="images/project1.png" data-link="https://abdulsobursuhuyiniadam73-png.github.io/personal-portfolio/">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project2.png" alt="Project 2">
+            <div class="project-info">
+                <h3>Text-to-Speech App</h3>
+                <p>Convert text into speech with voice controls and customization.</p>
+                <a href="#" class="btn project-btn open-modal" data-title="Text-to-Speech App" data-desc="Convert text into speech with voice controls and customization
+                  built with HTML, CSS & Javascript." data-img="images/project2.png" data-link="file:///D:/practicals/TTS/index.html">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project3.png" alt="Project 3">
+            <div class="project-info">
+                <h3>Image Search App</h3>
+                <p>A web app that searches and displays images using an API..</p>
+                <a href="#" class="btn project-btn open-modal" data-title="Image Search App" data-desc="A web app that searches and displays images using an API 
+                built with HTML, CSS & Javascript." data-img="images/project3.png" data-link="https://abdulsobursuhuyiniadam73-png.github.io/image-search-engine/">View Project</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="project-modal" class="modal">
+
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+
+            <img id="modal-img" src="" alt="Project Image">
+
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+
+            <a id="modal-link" href="#" target="_blank" class="btn">View Live</a>
+        </div>
+    </div>
+
+</section>
+<script>
+const modal = document.getElementById("project-modal");
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-desc");
+const modalLink = document.getElementById("modal-link");
+const closeBtn = document.querySelector(".close-btn");
+
+document.querySelectorAll(".open-modal").forEach(btn => {
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+
+        modal.style.display = "flex";
+
+        modalImg.src = this.dataset.img;
+        modalTitle.textContent = this.dataset.title;
+        modalDesc.textContent = this.dataset.desc;
+        modalLink.href = this.dataset.link;
+    });
+});
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
+
+window.onclick = (e) => {
+    if(e.target == modal){
+        modal.style.display = "none";
+    }
+};
+
+var icon = document.getElementById("icon");
+
+// 👉 Load saved theme when page opens
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-theme");
+    icon.src = "images/pic19.png";
+}else{
+    document.body.classList.remove("dark-theme");
+    icon.src = "images/pic18.png";
+}
+
+// 👉 Toggle theme on click
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "images/pic19.png";
+        localStorage.setItem("theme", "dark");   // save
+    }else{
+        icon.src = "images/pic18.png";
+        localStorage.setItem("theme", "light");  // save
+    }
+}
+</script>
+</body>
+</html>

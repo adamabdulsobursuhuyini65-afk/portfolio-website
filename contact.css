@@ -1,0 +1,177 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COLORS */
+:root{
+    --primary-color: #eff4fe;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+/* BODY */
+body{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* CONTACT SECTION */
+.contact{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.contact-card{
+    background: #ff4323;
+    padding: 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px; /* Bigger on desktop */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    color: #333;
+    text-align: left;
+    margin-top: 75px;
+    
+}
+
+/*PROFILE IMAGE*/
+.profile-image{
+    position: absolute;
+    top: 80px;
+    right: 450px;
+}
+
+.profile-image img{
+    width: 120px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+/* TITLE */
+.contact-card h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ITEMS */
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.contact-item img{
+    width: 28px;
+}
+
+.contact-item p{
+    font-size: 14px;
+    color: #333;
+}
+
+.dark-theme .contact-item p{
+    color: #fff;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icons a{
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.social-icons img{
+    width: 22px;
+}
+
+/* HOVER EFFECTS */
+.social-icons a:hover{
+    transform: translateY(-5px);
+}
+
+.social-icons a:nth-child(1):hover{
+    background: #25D366;
+}
+
+.social-icons a:nth-child(2):hover{
+    background: #1877F2;
+}
+
+.social-icons a:nth-child(3):hover{
+    background: #EA4335;
+}
+
+.social-icons a:nth-child(4):hover{
+    background: #0077B5;
+}
+
+.social-icons a:hover img{
+    filter: brightness(0) invert(1);
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px){
+
+    .contact{
+        padding: 30px 15px;
+    }
+
+    .contact-card{
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .contact-item{
+        gap: 10px;
+    }
+
+    .contact-item img{
+        width: 25px;
+    }
+
+    .contact-item p{
+        font-size: 13px;
+    }
+
+    .social-icons{
+        gap: 12px;
+    }
+
+    .social-icons a{
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icons img{
+        width: 18px;
+    }
+}
